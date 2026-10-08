@@ -387,3 +387,20 @@ img{max-width:100%}
   .footer-note{text-align:left;margin:0}
   .social-links{margin-left:0}
 }
+
+
+/* MOBILE FOOTER — compact closing treatment */
+@media(max-width:600px){
+  .bottom-claim{padding:30px 0 26px}
+  .bottom-claim-in{gap:16px}
+  .bottom-claim h2{font-size:36px;line-height:.96}
+  .bottom-claim p{font-size:14px;line-height:1.5}
+  .claim-logo{justify-content:flex-start;max-width:none}
+  .claim-logo img{width:150px;max-width:150px}
+  .footer{padding:5px 0 8px}
+  .footer-in{gap:10px}
+  .footer-note{font-size:10px;line-height:1.25;margin:0}
+  .social-links{gap:7px}
+  .social-link{width:30px;height:30px}
+  .social-link svg{width:14px;height:14px}
+}

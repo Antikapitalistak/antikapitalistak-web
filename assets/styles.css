@@ -277,3 +277,7 @@ img{max-width:100%}
   .axis p{font-size:16px}
   .latest-item p{font-size:15px}
 }
+
+.archive-row time,.archive-row .kind{font-size:12px}
+.article-meta{font-size:13px}
+.article-side{font-size:12px}

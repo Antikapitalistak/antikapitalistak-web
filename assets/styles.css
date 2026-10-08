@@ -281,3 +281,33 @@ img{max-width:100%}
 .archive-row time,.archive-row .kind{font-size:12px}
 .article-meta{font-size:13px}
 .article-side{font-size:12px}
+
+
+/* AXES HEADING — final editorial treatment */
+.axes-head{
+  display:flex;
+  flex-direction:column;
+  gap:5px;
+  margin-bottom:28px;
+  align-items:flex-start;
+}
+.axes-head h2,
+.axes-head .label{
+  font-family:var(--serif);
+  font-size:clamp(30px,3.2vw,42px);
+  line-height:1.02;
+  letter-spacing:-.035em;
+  font-weight:700;
+  color:var(--red);
+  text-transform:none;
+  margin:0;
+}
+.axis h3{margin-top:26px}
+.axis-num{display:none}
+
+@media(max-width:600px){
+  .axes-head{gap:4px;margin-bottom:22px}
+  .axes-head h2,
+  .axes-head .label{font-size:32px}
+  .axis h3{margin-top:18px}
+}

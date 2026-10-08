@@ -211,3 +211,12 @@ img{max-width:100%}
   .article-body{font-size:18px}
   .article-body h2{font-size:34px}
 }
+
+.article-deck{font-family:var(--serif);font-size:24px;line-height:1.35;color:#4e4945;max-width:850px;margin:0 0 22px}
+.source-note{margin-top:24px;padding:18px 20px;border-left:5px solid var(--red);background:var(--soft);font-size:13px;line-height:1.55;max-width:850px}
+.source-note a{font-weight:900;text-decoration:underline;text-underline-offset:3px}
+.article-body blockquote{margin:2em 0;padding:0 0 0 24px;border-left:6px solid var(--red);font-family:var(--serif);font-size:31px;line-height:1.18;font-weight:700;letter-spacing:-.025em}
+@media(max-width:600px){
+  .article-deck{font-size:20px}
+  .article-body blockquote{font-size:25px}
+}

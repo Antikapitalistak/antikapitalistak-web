@@ -343,3 +343,18 @@ img{max-width:100%}
   .axes-head h2,
   .axes-head .label{font-size:30px}
 }
+
+
+/* AXES LABEL — stronger visual hierarchy */
+.axes-head .label{
+  font-family:var(--serif);
+  font-size:52px !important;
+  line-height:.98;
+  letter-spacing:-.04em;
+  font-weight:700;
+  color:var(--red);
+  text-transform:none;
+}
+@media(max-width:600px){
+  .axes-head .label{font-size:40px !important}
+}

@@ -127,6 +127,7 @@ img{max-width:100%}
 .archive{width:min(calc(100% - 36px),var(--max));margin:auto;padding:24px 0 70px}
 .archive-row{display:grid;grid-template-columns:150px 1fr auto;gap:30px;padding:29px 0;border-bottom:1px solid var(--line);align-items:start}
 .archive-row time,.archive-row .kind{font-size:10px;font-weight:900;letter-spacing:.09em;text-transform:uppercase;color:var(--muted)}
+.archive-row .author{font-size:12px;letter-spacing:.025em;text-transform:none;line-height:1.4}
 .archive-row h2{font-family:var(--serif);font-size:30px;line-height:1.04;letter-spacing:-.025em;margin:0}
 .archive-row a{text-decoration:none}
 

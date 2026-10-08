@@ -311,3 +311,35 @@ img{max-width:100%}
   .axes-head .label{font-size:32px}
   .axis h3{margin-top:18px}
 }
+
+
+/* AXES HEADING — cache-busted final adjustment */
+.axes-head{
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+  gap:2px;
+  margin-bottom:30px;
+}
+.axes-head h2,
+.axes-head .label{
+  font-family:var(--serif);
+  font-size:36px;
+  line-height:1.04;
+  letter-spacing:-.025em;
+  font-weight:700;
+  color:var(--red);
+  text-transform:none;
+  margin:0;
+}
+.axes-head h2{white-space:nowrap}
+.axis-num{display:none!important}
+.axis h3{margin-top:24px}
+
+@media(max-width:900px){
+  .axes-head h2{white-space:normal}
+}
+@media(max-width:600px){
+  .axes-head h2,
+  .axes-head .label{font-size:30px}
+}

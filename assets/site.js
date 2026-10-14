@@ -21,3 +21,35 @@ function addSocialLinks(){
   });
 }
 addSocialLinks();
+
+
+function addParticipationNav(){
+  const nav=document.querySelector('.nav');
+  if(!nav) return;
+  const lang=document.documentElement.lang==='eu'?'eu':'es';
+  const href=lang==='eu'?'/eu/parte-hartu/':'/es/participa/';
+  const label=lang==='eu'?'Parte hartu':'Participa';
+  if(!Array.from(nav.querySelectorAll('a')).some((a)=>a.getAttribute('href')===href||a.href.endsWith(href))) {
+    const a=document.createElement('a');
+    a.href=href;
+    a.textContent=label;
+    nav.appendChild(a);
+  }
+}
+
+function addPrivacyLink(){
+  document.querySelectorAll('.footer-in').forEach((footer)=>{
+    if(footer.querySelector('.footer-legal')) return;
+    const lang=document.documentElement.lang==='eu'?'eu':'es';
+    const a=document.createElement('a');
+    a.className='footer-legal';
+    a.href=lang==='eu'?'/eu/pribatutasuna/':'/es/privacidad/';
+    a.textContent=lang==='eu'?'Pribatutasuna':'Privacidad';
+    const social=footer.querySelector('.social-links');
+    if(social) footer.insertBefore(a,social);
+    else footer.appendChild(a);
+  });
+}
+
+addParticipationNav();
+addPrivacyLink();

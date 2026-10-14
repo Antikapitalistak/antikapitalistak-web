@@ -703,3 +703,49 @@ img{max-width:100%}
   .legal-copy{width:min(calc(100% - 28px),860px);font-size:17px;padding-bottom:56px}
   .legal-copy h2{font-size:27px}
 }
+
+
+/* HOME PARTICIPATION CTA */
+.join-cta{
+  width:min(calc(100% - 36px),var(--max));
+  margin:0 auto 58px;
+  border-top:2px solid var(--ink);
+  border-bottom:1px solid var(--ink);
+  padding:34px 0 36px;
+  display:grid;
+  grid-template-columns:1.2fr .8fr;
+  gap:42px;
+  align-items:end;
+}
+.join-cta .eyebrow{margin-bottom:14px}
+.join-cta h2{
+  font-family:var(--serif);
+  font-size:clamp(38px,4.6vw,62px);
+  line-height:.96;
+  letter-spacing:-.045em;
+  margin:0;
+}
+.join-cta p{
+  margin:0 0 22px;
+  max-width:540px;
+  font-size:16px;
+  line-height:1.55;
+}
+.join-cta .btn{justify-self:start}
+.footer-legal{
+  color:#fff;
+  font-size:11px;
+  text-decoration:none;
+  border-bottom:1px solid #77716c;
+  padding-bottom:2px;
+  margin-left:auto;
+}
+.footer-legal:hover{border-color:#fff}
+@media(max-width:760px){
+  .join-cta{grid-template-columns:1fr;gap:18px}
+}
+@media(max-width:600px){
+  .join-cta{width:min(calc(100% - 28px),var(--max));margin-bottom:44px;padding:28px 0 30px}
+  .join-cta h2{font-size:40px}
+  .footer-legal{margin-left:0}
+}

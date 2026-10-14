@@ -13,7 +13,7 @@ function doPost(e) {
   const lang = p.lang === 'eu' ? 'eu' : 'es';
   const consent = p.consent === 'yes';
 
-  if (!name || !email || !locality || !interest || !message || !consent || !validEmail_(email)) {
+  if (!consent || (email && !validEmail_(email))) {
     return HtmlService.createHtmlOutput('ERROR');
   }
 
@@ -45,7 +45,7 @@ function doPost(e) {
 
   MailApp.sendEmail({
     to: AK_EMAIL,
-    subject: '[WEB] Nuevo contacto — ' + name + ' — ' + locality,
+    subject: '[WEB] Nuevo contacto' + (name ? ' — ' + name : '') + (locality ? ' — ' + locality : ''),
     htmlBody:
       '<p><strong>Nuevo contacto desde antikapitalistak.eus</strong></p>' +
       '<p><strong>Nombre:</strong> ' + html_(name) + '<br>' +
@@ -58,20 +58,24 @@ function doPost(e) {
     name: 'Web Antikapitalistak'
   });
 
-  const ackSubject = lang === 'eu'
-    ? 'Zure mezua jaso dugu — Antikapitalistak Euskal Herria'
-    : 'Hemos recibido tu mensaje — Antikapitalistak Euskal Herria';
+  if (email) {
+    const ackSubject = lang === 'eu'
+      ? 'Zure mezua jaso dugu — Antikapitalistak Euskal Herria'
+      : 'Hemos recibido tu mensaje — Antikapitalistak Euskal Herria';
 
-  const ackBody = lang === 'eu'
-    ? '<p>Kaixo, ' + html_(name) + ':</p><p>Eskerrik asko Antikapitalistak Euskal Herriarekin harremanetan jartzeagatik. Zure mezua jaso dugu.</p><p>Laster jarriko gara zurekin harremanetan.</p><p>Ondo izan,<br><strong>Antikapitalistak Euskal Herria</strong></p>'
-    : '<p>Kaixo, ' + html_(name) + ':</p><p>Gracias por ponerte en contacto con Antikapitalistak Euskal Herria. Hemos recibido tu mensaje.</p><p>En breve nos pondremos en contacto contigo.</p><p>Un saludo,<br><strong>Antikapitalistak Euskal Herria</strong></p>';
+    const displayName = name || (lang === 'eu' ? 'lagun' : 'compa');
 
-  MailApp.sendEmail({
-    to: email,
-    subject: ackSubject,
-    htmlBody: ackBody,
-    name: 'Antikapitalistak Euskal Herria'
-  });
+    const ackBody = lang === 'eu'
+      ? '<p>Kaixo, ' + html_(displayName) + ':</p><p>Eskerrik asko Antikapitalistak Euskal Herriarekin harremanetan jartzeagatik. Zure mezua jaso dugu.</p><p>Laster jarriko gara zurekin harremanetan.</p><p>Ondo izan,<br><strong>Antikapitalistak Euskal Herria</strong></p>'
+      : '<p>Kaixo, ' + html_(displayName) + ':</p><p>Gracias por ponerte en contacto con Antikapitalistak Euskal Herria. Hemos recibido tu mensaje.</p><p>En breve nos pondremos en contacto contigo.</p><p>Un saludo,<br><strong>Antikapitalistak Euskal Herria</strong></p>';
+
+    MailApp.sendEmail({
+      to: email,
+      subject: ackSubject,
+      htmlBody: ackBody,
+      name: 'Antikapitalistak Euskal Herria'
+    });
+  }
 
   return HtmlService.createHtmlOutput('OK');
 }

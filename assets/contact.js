@@ -1,4 +1,4 @@
-const CONTACT_ENDPOINT = '';
+const CONTACT_ENDPOINT = 'https://script.google.com/macros/s/AKfycbyd4zkhV7i1Qkx4f0JqSv1s9UaErmhPeIKcwXjimGP-6W6_nbpRbuvQ_3y9qnqEm_FA/exec';
 
 (function(){
   const form=document.querySelector('[data-contact-form]');

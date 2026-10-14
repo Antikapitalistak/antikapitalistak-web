@@ -547,3 +547,28 @@ img{max-width:100%}
   .further-reading{padding-bottom:56px}
   .reading-feature h2{font-size:39px}
 }
+
+/* FORMACION / TEXTOS — multiple reading actions */
+.reading-source{
+  grid-column:1;
+  margin-top:7px;
+  font-size:12px;
+  line-height:1.4;
+  color:var(--muted);
+}
+.reading-actions{
+  grid-column:2;
+  display:flex;
+  flex-wrap:wrap;
+  gap:16px;
+  margin-top:24px;
+  align-items:flex-start;
+}
+.reading-actions .resource-link{
+  grid-column:auto;
+  margin-top:0;
+}
+@media(max-width:760px){
+  .reading-source,.reading-actions{grid-column:1;grid-row:auto}
+  .reading-actions{margin-top:22px}
+}

@@ -18,13 +18,13 @@
     <div class="contact-form-wrap">
       <form class="contact-form" data-contact-form method="post" target="contact-submit-frame" novalidate>
         <div class="form-row">
-          <label>Nombre <span>*</span><input type="text" name="name" autocomplete="name" maxlength="120" required></label>
-          <label>Correo electrónico <span>*</span><input type="email" name="email" autocomplete="email" maxlength="200" required></label>
+          <label>Nombre<input type="text" name="name" autocomplete="name" maxlength="120"></label>
+          <label>Correo electrónico<input type="email" name="email" autocomplete="email" maxlength="200"></label>
         </div>
         <div class="form-row">
-          <label>Localidad o comarca <span>*</span><input type="text" name="locality" autocomplete="address-level2" maxlength="160" required></label>
-          <label>¿Qué te interesa? <span>*</span>
-            <select name="interest" required>
+          <label>Localidad o comarca<input type="text" name="locality" autocomplete="address-level2" maxlength="160"></label>
+          <label>¿Qué te interesa?
+            <select name="interest">
               <option value="">Selecciona una opción</option>
               <option>Participar en actividades</option>
               <option>Conocer la organización</option>
@@ -34,8 +34,8 @@
             </select>
           </label>
         </div>
-        <label>Mensaje <span>*</span><textarea name="message" rows="7" maxlength="5000" required></textarea></label>
-        <label class="consent-row"><input type="checkbox" name="consent" value="yes" required><span>He leído la <a href="../privacidad/index.html" target="_blank" rel="noopener">información sobre privacidad</a> y consiento expresamente el tratamiento de mis datos para gestionar esta solicitud.</span></label>
+        <label>Mensaje<textarea name="message" rows="7" maxlength="5000"></textarea></label>
+        <label class="consent-row"><input type="checkbox" name="consent" value="yes"><span>He leído la <a href="../privacidad/index.html" target="_blank" rel="noopener">información sobre privacidad</a> y consiento expresamente el tratamiento de mis datos para gestionar esta solicitud.</span></label>
         <input type="hidden" name="lang" value="es">
         <input type="hidden" name="submitted_at" value="">
         <div class="hp-field" aria-hidden="true"><label>No rellenar<input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>

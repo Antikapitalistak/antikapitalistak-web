@@ -18,13 +18,13 @@
     <div class="contact-form-wrap">
       <form class="contact-form" data-contact-form method="post" target="contact-submit-frame" novalidate>
         <div class="form-row">
-          <label>Izena <span>*</span><input type="text" name="name" autocomplete="name" maxlength="120" required></label>
-          <label>Helbide elektronikoa <span>*</span><input type="email" name="email" autocomplete="email" maxlength="200" required></label>
+          <label>Izena<input type="text" name="name" autocomplete="name" maxlength="120"></label>
+          <label>Helbide elektronikoa<input type="email" name="email" autocomplete="email" maxlength="200"></label>
         </div>
         <div class="form-row">
-          <label>Herria edo eskualdea <span>*</span><input type="text" name="locality" autocomplete="address-level2" maxlength="160" required></label>
-          <label>Zer interesatzen zaizu? <span>*</span>
-            <select name="interest" required>
+          <label>Herria edo eskualdea<input type="text" name="locality" autocomplete="address-level2" maxlength="160"></label>
+          <label>Zer interesatzen zaizu?
+            <select name="interest">
               <option value="">Aukeratu aukera bat</option>
               <option>Jardueretan parte hartzea</option>
               <option>Antolakuntza ezagutzea</option>
@@ -34,8 +34,8 @@
             </select>
           </label>
         </div>
-        <label>Mezua <span>*</span><textarea name="message" rows="7" maxlength="5000" required></textarea></label>
-        <label class="consent-row"><input type="checkbox" name="consent" value="yes" required><span><a href="../pribatutasuna/index.html" target="_blank" rel="noopener">Pribatutasunari buruzko informazioa</a> irakurri dut eta nire datuak eskaera hau kudeatzeko tratatzea berariaz onartzen dut.</span></label>
+        <label>Mezua<textarea name="message" rows="7" maxlength="5000"></textarea></label>
+        <label class="consent-row"><input type="checkbox" name="consent" value="yes"><span><a href="../pribatutasuna/index.html" target="_blank" rel="noopener">Pribatutasunari buruzko informazioa</a> irakurri dut eta nire datuak eskaera hau kudeatzeko tratatzea berariaz onartzen dut.</span></label>
         <input type="hidden" name="lang" value="eu">
         <input type="hidden" name="submitted_at" value="">
         <div class="hp-field" aria-hidden="true"><label>Ez bete<input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>

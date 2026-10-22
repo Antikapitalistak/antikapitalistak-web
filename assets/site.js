@@ -53,3 +53,19 @@ function addPrivacyLink(){
 
 addParticipationNav();
 addPrivacyLink();
+
+function addAgendaNav(){
+  const nav=document.querySelector('.nav');
+  if(!nav) return;
+  const lang=document.documentElement.lang==='eu'?'eu':'es';
+  const href=lang==='eu'?'/eu/agenda/':'/es/agenda/';
+  if(!Array.from(nav.querySelectorAll('a')).some((a)=>a.href.endsWith(href))){
+    const a=document.createElement('a');
+    a.href=href;
+    a.textContent='Agenda';
+    const participa=Array.from(nav.querySelectorAll('a')).find((a)=>a.textContent==='Participa'||a.textContent==='Parte hartu');
+    if(participa) nav.insertBefore(a,participa);
+    else nav.appendChild(a);
+  }
+}
+addAgendaNav();

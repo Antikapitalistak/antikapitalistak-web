@@ -968,3 +968,19 @@ img{max-width:100%}
   .agenda-times-grid{grid-template-columns:1fr}
   .agenda-callout{font-size:21px}
 }
+
+/* ARTICLE LEAD IMAGE */
+.article-lead-image{
+  width:min(calc(100% - 36px),var(--max));
+  margin:34px auto 8px;
+}
+.article-lead-image img{
+  display:block;
+  width:min(100%,760px);
+  height:auto;
+  margin:0 auto;
+  border:1px solid var(--line);
+}
+@media(max-width:600px){
+  .article-lead-image{width:min(calc(100% - 28px),var(--max));margin-top:24px}
+}

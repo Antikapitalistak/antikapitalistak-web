@@ -69,3 +69,17 @@ function addAgendaNav(){
   }
 }
 addAgendaNav();
+
+function addInternationalReferences(){
+  const eu=document.documentElement.lang==='eu';
+  document.querySelectorAll('.footer-in').forEach((footer)=>{
+    if(footer.querySelector('.footer-references')) return;
+    const block=document.createElement('div');
+    block.className='footer-references';
+    block.innerHTML=eu
+      ? '<span><a href="https://fourth.international/" target="_blank" rel="noopener noreferrer">IV. Internazionaleko</a> kide gara.</span><span>Erreferentziazko argitalpenak: <a href="https://poderpopular.info/" target="_blank" rel="noopener noreferrer">Poder Popular</a>.</span>'
+      : '<span><a href="https://fourth.international/es/" target="_blank" rel="noopener noreferrer">IV Internacional</a>: formamos parte de ella.</span><span>Publicaciones de referencia: <a href="https://poderpopular.info/" target="_blank" rel="noopener noreferrer">Poder Popular</a>.</span>';
+    footer.prepend(block);
+  });
+}
+addInternationalReferences();

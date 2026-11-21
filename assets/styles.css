@@ -984,3 +984,9 @@ img{max-width:100%}
 @media(max-width:600px){
   .article-lead-image{width:min(calc(100% - 28px),var(--max));margin-top:24px}
 }
+
+/* Referencias internacionales y publicaciones en el pie */
+.footer-in{flex-wrap:wrap}
+.footer-references{flex:1 1 100%;display:flex;flex-wrap:wrap;gap:6px 24px;padding:8px 0 10px;font-size:12px;line-height:1.5;color:#e0dcda}
+.footer-references a{text-decoration:underline;text-underline-offset:3px}
+.footer-references a:hover{color:#fff}
